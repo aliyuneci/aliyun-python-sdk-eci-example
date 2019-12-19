@@ -1,0 +1,5 @@
+AK_ID = 'xxx'
+AK_SECRET = 'xxx'
+SECURITY_GROUP_ID = 'sg-bp13xej624v0pfqnf6dr'
+VSWITCH_ID = 'vsw-bp1r8o0vc91q4aklqlg09'
+REGION_ID = 'cn-hangzhou'
