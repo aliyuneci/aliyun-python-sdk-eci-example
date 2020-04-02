@@ -34,6 +34,8 @@ def createContainerGroup():
         'Name': 'nginx-liu',
         'Cpu': 2,
         'Memory': 4,
+        "Commands": ["/bin/sh"],
+        "Args": ["-c", "sleep 10000"],
         'ImagePullPolicy': ImagePullPolicy.Always.value,
         'VolumeMounts': [volume_mount2],
     }
