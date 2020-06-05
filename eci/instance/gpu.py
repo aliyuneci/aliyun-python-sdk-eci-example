@@ -9,9 +9,6 @@ def createContainerGroup():
     request = buildCreateContainerGroupRequest()
     request.set_InstanceType("ecs.gn6v-c8g1.2xlarge")
 
-
-
-
     # containers
     container1 = {
         'Image': 'registry-vpc.cn-beijing.aliyuncs.com/eci_open/nginx:1.15.10',
