@@ -5,11 +5,7 @@ from aliyunsdkeci.request.v20180808.CreateContainerGroupRequest import CreateCon
 from aliyunsdkeci.request.v20180808.DescribeContainerGroupsRequest import DescribeContainerGroupsRequest
 from aliyunsdkeci.request.v20180808.DeleteContainerGroupRequest import DeleteContainerGroupRequest
 
-from Constant import AK_ID
-from Constant import AK_SECRET
-from Constant import SECURITY_GROUP_ID
-from Constant import VSWITCH_ID
-from Constant import REGION_ID
+from eci.common.Constant import *
 
 def initClient():
     client = AcsClient(
