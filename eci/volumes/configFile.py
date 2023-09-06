@@ -51,4 +51,4 @@ def createContainerGroup():
 
     response = client.do_action_with_exception(request)
 
-    print response
+    print(response)
