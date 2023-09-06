@@ -13,3 +13,5 @@ class VolumeType(Enum):
     DiskVolume = 'DiskVolume'
 
     FlexVolume = 'FlexVolume'
+
+    HostPathVolume = "HostPathVolume"
