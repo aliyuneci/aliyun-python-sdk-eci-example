@@ -26,11 +26,11 @@ class BatchAction:
                 next_token = result.get("NextToken")
                 for container_group in result.get("ContainerGroups"):
                     container_group_ids.append(container_group.get("ContainerGroupId"))
-            if result.get('NextToken') == '':
+            if not result.get('NextToken'):
                 for container_group in result.get("ContainerGroups"):
                     container_group_ids.append(container_group.get("ContainerGroupId"))
                 break
-        print(f"查询总实例数: {len(container_group_ids)}")
+        print(f"查询当前地域 {self.region_id} 总实例数: {len(container_group_ids)}")
         return container_group_ids
 
     def batch_delete(self, container_group_ids: list):
@@ -44,6 +44,6 @@ class BatchAction:
 
 if __name__ == '__main__':
     demo = BatchAction("access_key_id", "access_key_secret", "cn-hangzhou")
-    ecis = demo.all(status="Pending")
+    ecis = demo.all()
     print(ecis)
     demo.batch_delete(ecis)
